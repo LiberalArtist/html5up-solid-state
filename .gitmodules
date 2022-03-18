@@ -1,0 +1,6 @@
+[submodule "responsive-tools"]
+	path = responsive-tools
+	url = https://github.com/ajlkn/responsive-tools
+[submodule "scrollex"]
+	path = scrollex
+	url = https://github.com/ajlkn/jquery.scrollex
