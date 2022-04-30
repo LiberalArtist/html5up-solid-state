@@ -97,6 +97,31 @@
 of web-friendly formats.")
     (license (list license:expat license:cc-by4.0 license:silofl1.1))))
 
+(define-public normalize.css
+  (package
+    (name "normalize-css")
+    (version "8.0.1")
+    (source
+     (origin (method git-fetch)
+             (uri (git-reference
+                   (url "https://github.com/necolas/normalize.css")
+                   (commit version)))
+             (sha256
+              (base32
+               "0i8wxwbxrfb2iq07h13aydw0nlvxg3mimkbzl630g0injcjr5y1s"))
+             (file-name (git-file-name name version))))
+    (build-system copy-build-system)
+    (arguments
+     (list
+      #:install-plan
+      #~`(("normalize.css" "share/"))))
+    (home-page "https://necolas.github.io/normalize.css/")
+    (synopsis "Modern, HTML5-ready alternative to CSS resets")
+    (description "Normalize.css makes browsers render all elements
+more consistently and in line with modern standards.  It precisely
+targets only the styles that need normalizing.")
+    (license license:expat)))
+
 (define-public html5up-solid-state
   (package
     (name "html5up-solid-state")
@@ -105,6 +130,7 @@ of web-friendly formats.")
      (list racket ;; need `#lang at-exp`
            sassc
            fontawesome
+           normalize.css
            git-minimal
            reuse
            tidy-html))
@@ -145,6 +171,12 @@ of web-friendly formats.")
                          "vendor/assets/css/fontawesome-all.css")
                 (symlink (string-append fa "/webfonts")
                          "vendor/assets/webfonts"))))
+          (add-after 'fontawesome 'normalize.css
+            (lambda* (#:key native-inputs inputs #:allow-other-keys)
+              (mkdir-p "vendor/assets/css")
+              (symlink (search-input-file (or native-inputs inputs)
+                                          "/share/normalize.css")
+                       "vendor/assets/css/normalize.css")))
           (add-before 'install 'bundle
             (lambda args
               ;; don't use symlinks in output to avoid
