@@ -1,5 +1,11 @@
-/* jquery.scrollex v0.2.1 | (c) @ajlkn | github.com/ajlkn/jquery.scrollex | MIT licensed */
-
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: © @ajlkn <aj@lkn.io>
+/*
+  jquery.scrollex v0.2.1
+  Upstream: https://github.com/ajlkn/jquery.scrollex
+  Commit: cc3e7490ff033d76c5268497843b51ac8480aa7a
+*/
 (function($) {
 
 	var $window = $(window),
@@ -322,3 +328,5 @@
 	};
 
 })(jQuery);
+// @license-end
+/* jquery.scrollex.js ends here */

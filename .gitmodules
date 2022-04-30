@@ -1,8 +1,2 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: Philip McGrath <philip@philipmcgrath.com>
-[submodule "responsive-tools"]
-	path = responsive-tools
-	url = https://github.com/ajlkn/responsive-tools
-[submodule "scrollex"]
-	path = scrollex
-	url = https://github.com/ajlkn/jquery.scrollex

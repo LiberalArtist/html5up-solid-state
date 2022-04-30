@@ -1,4 +1,11 @@
-/* breakpoints.js v1.0 | @ajlkn | MIT licensed */
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: © @ajlkn <aj@lkn.io>
+/*
+  breakpoints.js | Responsive Tools v1.0
+  Upstream: https://github.com/ajlkn/responsive-tools
+  Commit: cc4937e5ba986b1bbd3d6cc36deaa472d100437b
+*/
 
 var breakpoints = (function() { "use strict"; var _ = {
 
@@ -349,3 +356,5 @@ var breakpoints = (function() { "use strict"; var _ = {
 			root.breakpoints = factory();
 
 }(this, function() { return breakpoints; }));
+// @license-end
+/* breakpoints.js ends here */

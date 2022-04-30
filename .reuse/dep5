@@ -1,23 +1,10 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Solid State
 
-Files: responsive-tools/*
-License: MIT
-Copyright: © @ajlkn <aj@lkn.io>
-Comment: https://github.com/ajlkn/responsive-tools
+Files: channels
+License: CC0-1.0
+Copyright: Output of `guix describe --format=channels > channels`
 
-Files: scrollex/*
-License: MIT
+Files: README.upstream.txt
+License: CC-BY-3.0
 Copyright: © @ajlkn <aj@lkn.io>
-Comment: https://github.com/ajlkn/jquery.scrollex
-
-Files: scrollex/demos/scroll.html
-License: MIT
-Copyright: © @ajlkn <aj@lkn.io>
-Comment: The author "n33.co @n33co" is the same person as "@ajlkn <aj@lkn.io>".
-
-Files: scrollex/demos/common.css
-License: (MIT AND LicenseRef:MeyerCssReset)
-Copyright: © @ajlkn <aj@lkn.io>
-Copyright: © 2011 Eric A. Meyer
-Comment: Incorporates a CSS reset under an informal public domain license.
