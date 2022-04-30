@@ -135,14 +135,14 @@ of web-friendly formats.")
           (add-after 'sassc 'jquery
             (lambda args
               (mkdir-p "vendor/assets/js")
-              (symlink #$jquery.js "vendor/assets/js/jquery.min.js")))
+              (symlink #$jquery.js "vendor/assets/js/jquery.js")))
           (add-after 'jquery 'fontawesome
             (lambda* (#:key native-inputs inputs #:allow-other-keys)
               (let ((fa (search-input-directory (or native-inputs inputs)
                                                 "share/fontawesome")))
                 (mkdir-p "vendor/assets/css")
                 (symlink (string-append fa "/css/all.css")
-                         "vendor/assets/css/fontawesome-all.min.css")
+                         "vendor/assets/css/fontawesome-all.css")
                 (symlink (string-append fa "/webfonts")
                          "vendor/assets/webfonts"))))
           (add-before 'install 'bundle
