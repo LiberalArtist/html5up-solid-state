@@ -1,0 +1,2 @@
+SPDX-FileCopyrightText: Output of `guix describe --format=channels > channels`
+SPDX-License-Identifier: CC0-1.0
