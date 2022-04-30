@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: © @ajlkn <aj@lkn.io>
 (function($) {
 
 	/**

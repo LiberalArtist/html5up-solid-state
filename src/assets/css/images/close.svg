@@ -1,3 +1,9 @@
+<?xml version="1.0"?>
+<!--
+SPDX-License-Identifier: CC-BY-3.0
+SPDX-FileCopyrightText: © @ajlkn <aj@lkn.io>
+(N.B. MDN advises against using a DTD for svg.)
+-->
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
 	<style>
 		line { stroke: #ffffff; stroke-width: 2px; }

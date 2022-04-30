@@ -1,3 +1,10 @@
+/*
+  _functions.scss | Solid State by HTML5 UP
+  -----------------------------------------
+  SPDX-License-Identifier: CC-BY-3.0
+  SPDX-FileCopyrightText: © @ajlkn <aj@lkn.io>
+  SPDX-FileCopyrightText: Hugo Giraudel
+*/
 /// Removes a specific item from a list.
 /// @author Hugo Giraudel
 /// @param {list} $list List.
@@ -88,3 +95,4 @@
 @function _size($keys...) {
 	@return val($size, $keys...);
 }
+/* _functions.scss ends here */

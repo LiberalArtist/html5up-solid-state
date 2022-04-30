@@ -1,3 +1,9 @@
+/*
+  _mixins.scss | Solid State by HTML5 UP
+  --------------------------------------
+  SPDX-License-Identifier: CC-BY-3.0
+  SPDX-FileCopyrightText: © @ajlkn <aj@lkn.io>
+*/
 /// Makes an element's :before pseudoelement a FontAwesome icon.
 /// @param {string} $content Optional content value to use.
 /// @param {string} $category Optional category to use.
@@ -76,3 +82,4 @@
 	@return url("data:image/svg+xml;charset=utf8,#{$svg}");
 
 }
+/* _mixins.scss ends here */
