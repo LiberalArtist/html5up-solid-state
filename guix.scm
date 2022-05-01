@@ -151,13 +151,15 @@ targets only the styles that need normalizing.")
           (add-before 'install 'sassc
             (lambda args
               (mkdir-p "build/assets/css")
-              (for-each (lambda (name)
-                          (invoke "sassc"
-                                  "--sourcemap=inline"
-                                  (format #f "sass/~a.scss" name)
-                                  (format #f "build/assets/css/~a.css" name)))
-                        `("noscript"
-                          "main"))))
+              (copy-recursively "sass" "build/assets/sass")
+              (with-directory-excursion "build"
+                (for-each (lambda (name)
+                            (invoke "sassc"
+                                    "--sourcemap=inline"
+                                    (format #f "assets/sass/~a.scss" name)
+                                    (format #f "assets/css/~a.css" name)))
+                          `("noscript"
+                            "main")))))
           (add-after 'sassc 'jquery
             (lambda args
               (mkdir-p "vendor/assets/js")
