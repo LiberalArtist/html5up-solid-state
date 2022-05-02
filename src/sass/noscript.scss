@@ -4,12 +4,12 @@
   SPDX-License-Identifier: CC-BY-3.0
   SPDX-FileCopyrightText: © @ajlkn <aj@lkn.io>
 */
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
-@import 'libs/vendor';
-@import 'libs/breakpoints';
-@import 'libs/html-grid';
+@import "libs/vars";
+@import "libs/functions";
+@import "libs/mixins";
+@import "libs/vendor";
+@import "libs/breakpoints";
+@import "libs/html-grid";
 
 /*
 	Solid State by HTML5 UP
@@ -19,24 +19,24 @@
 
 /* Banner */
 
-	#banner {
-		body.is-preload & {
-			.logo {
-				@include vendor('transform', 'none');
-				opacity: 1;
-			}
+#banner {
+    body.is-preload & {
+        .logo {
+            @include vendor("transform", "none");
+            opacity: 1;
+        }
 
-			h2 {
-				opacity: 1;
-				@include vendor('transform', 'none');
-				@include vendor('filter', 'none');
-			}
+        h2 {
+            opacity: 1;
+            @include vendor("transform", "none");
+            @include vendor("filter", "none");
+        }
 
-			p {
-				opacity: 01;
-				@include vendor('transform', 'none');
-				@include vendor('filter', 'none');
-			}
-		}
-	}
+        p {
+            opacity: 01;
+            @include vendor("transform", "none");
+            @include vendor("filter", "none");
+        }
+    }
+}
 /* noscript.scss ends here */
