@@ -1,5 +1,5 @@
 ;; SPDX-License-Identifier: CC0-1.0
-;; SPDX-FileCopyrightText: 2022 Philip McGrath <philip@philipmcgrath.com>
+;; SPDX-FileCopyrightText: Philip McGrath <philip@philipmcgrath.com>
 (use-modules (gnu packages)
              (gnu packages license)
              (gnu packages racket)

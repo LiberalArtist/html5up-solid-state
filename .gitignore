@@ -3,6 +3,8 @@
 
 # Solid State:
 /build
+/result
+/.prettierignore
 
 # Racket:
 compiled/
