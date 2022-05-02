@@ -9,8 +9,14 @@ GUIX=guix
 GUIX_TIME_MACHINE=$(GUIX) time-machine -C channels
 
 .PHONY: all
-all: .prettierignore
+all: .prettierignore build
 	$(warning Consider `make check` or `make prettier-write`)
+
+.PHONY: build
+build:
+	$(GUIX_TIME_MACHINE) -- build --keep-failed -f guix.scm
+	rm -f build
+	$(GUIX_TIME_MACHINE) -- build -f guix.scm --root=build
 
 .PHONY: check
 check: prettier-check reuse-lint
@@ -28,4 +34,6 @@ prettier-write: .prettierignore
 
 .PHONY: reuse-lint
 reuse-lint:
-	$(GUIX_TIME_MACHINE) -- shell reuse --pure --container -- reuse lint
+	$(GUIX_TIME_MACHINE) -- \
+		shell reuse git-minimal --pure --container -- \
+		reuse lint
